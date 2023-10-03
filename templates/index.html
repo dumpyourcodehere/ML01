@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attrition Prediction</title>
+</head>
+
+<body>
+    <h2>Attrition Prediction</h2>
+
+    <form action="/" method="post">
+        <!-- Input fields for all the features -->
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br><br>
+
+        <label for="experience">Experience (YY.MM):</label>
+<input type="text" id="experience" name="experience"><br><br>
+
+<label for="age">Age in YY.:</label>
+<input type="text" id="age" name="age"><br><br>
+
+
+        <label for="function">Function:</label>
+        <input type="text" id="function" name="function"><br><br>
+
+        <label for="hiring_source">Hiring Source:</label>
+        <input type="text" id="hiring_source" name="hiring_source"><br><br>
+
+        <label for="marital_status">Marital Status:</label>
+        <input type="text" id="marital_status" name="marital_status"><br><br>
+
+        <label for="promotion">Promoted/Non Promoted:</label>
+        <input type="text" id="promotion" name="promotion"><br><br>
+
+        <label for="emp_group">Emp. Group:</label>
+        <input type="text" id="emp_group" name="emp_group"><br><br>
+
+        <label for="job_role_match">Job Role Match:</label>
+        <input type="text" id="job_role_match" name="job_role_match"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender"><br><br>
+
+        <label for="tenure_grp">Tenure Grp.:</label>
+        <input type="text" id="tenure_grp" name="tenure_grp"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- Display the result -->
+    {% if prediction %}
+    <h3>Prediction Result:</h3>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+
+</html>
